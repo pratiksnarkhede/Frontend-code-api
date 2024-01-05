@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Profiles</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Profile Management</h1>
+        <div class="form-container">
+            <h2>Add Employee</h2>
+            <form id="addForm">
+                <label for="empid">Employee ID:</label>
+                <input type="text" name="employeeid" id="empid">
+                <label for="fname">First name:</label>
+                <input type="text" name="firstname" id="fname">
+                <label for="lname">Last name:</label>
+                <input type="text" name="lastname" id="lname">
+                <label for="empage">Employee Age:</label>
+                <input type="text" name="empage" id="empage">
+                <label for="designation">Designation:</label>
+                <input type="text" name="designation" id="designation">
+                <input type="button" id="saveprofile" value="Save Profile" onclick="addEmployee()">
+            </form>
+            <p id="profileSaved"></p>
+        </div>
+        <hr>
+        <div class="view-container">
+            <h2>View Employees</h2>
+            <input type="button" id="getprofile" value="View all Employee Profiles" onclick="getAllEmployees()">
+            <div id="showProfile">
+                <table id="employeeProfile">
+                    <colgroup>
+                        <col style="width:15%">
+                        <col style="width:15%">
+                        <col style="width:15%">
+                        <col style="width:15%">
+                        <col style="width:20%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>Employee ID</th>
+                            <th>First name</th>
+                            <th>Last Name</th>
+                            <th>Employee Age</th>
+                            <th>Designation</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
