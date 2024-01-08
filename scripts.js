@@ -16,7 +16,7 @@ function addEmployee() {
     };
 
     // Simulate API call to add employee
-    simulateApiCall('POST', 'https://oy8xmu4u5i.execute-api.us-east-1.amazonaws.com/dev', profile)
+    simulateApiCall('POST', 'https://mywebapplication.me', profile)
         .then(response => {
             employeeProfiles.push(response);
             $('#profileSaved').text('Employee profile saved successfully.');
@@ -28,7 +28,7 @@ function addEmployee() {
 
 function getAllEmployees() {
     // Simulate API call to retrieve all employees
-    simulateApiCall('GET', 'https://oy8xmu4u5i.execute-api.us-east-1.amazonaws.com/dev')
+    simulateApiCall('GET', 'https://mywebapplication.me')
         .then(response => {
             displayEmployeeList(response);
         })
